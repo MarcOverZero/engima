@@ -13,8 +13,20 @@ class Key
     # @d = "#{cut[3]}#{cut[4]}".to_i
   end
 
-  def rotated_a
+  def a_rotation
     @a = "#{@cut_key[0]}#{@cut_key[1]}".to_i + @offset.a
+  end
+
+  def b_rotation
+    @b = "#{@cut_key[1]}#{@cut_key[2]}".to_i + @offset.b
+  end
+
+  def c_rotation
+    @c = "#{@cut_key[2]}#{@cut_key[3]}".to_i + @offset.c
+  end
+
+  def d_rotation
+    @d = "#{@cut_key[3]}#{@cut_key[4]}".to_i + @offset.d
   end
 
   def run
