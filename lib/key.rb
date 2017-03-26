@@ -1,7 +1,7 @@
 require 'pry'
 
 class Key
-  attr_reader
+  attr_reader :blank_key, :cut_key, :a, :b, :c, :d
   def initialize
     @blank_key = [0,0,0,0,0]
     @a = "#{cut[0]}#{cut[1]}".to_i
@@ -12,11 +12,20 @@ class Key
 
   def cut
     seed = (0..9).to_a
-    @blank_key.map do |i|
+    @cut_key = @blank_key.map do |i|
       i + seed.sample
     end
   end
 
+  def puts_driven
+    puts @a
+  end
 
-
+  def run
+    cut
+    puts_driven
+  end
+binding.pry
 end
+
+Key.new.run
