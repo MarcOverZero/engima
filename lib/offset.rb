@@ -15,7 +15,6 @@ attr_reader :a, :b, :c, :d
     format_date
     four
     offset_collection
-    puts_driven
   end
 
   def date
@@ -36,10 +35,6 @@ attr_reader :a, :b, :c, :d
     four.map do |i|
       i.to_i
     end
-  end
-
-  def puts_driven
-    puts a
   end
 end
 
