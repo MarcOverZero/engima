@@ -9,17 +9,14 @@ require './lib/encrypt'
 
 class EncryptTest < Minitest::Test
   def test_it_exists
-    encrypt = Encrypt.new
+    encrypt = Encrypt.new("hello")
 
     assert_instance_of Encrypt, encrypt
   end
 
-  def test_it_can_parse_message
-    encrypt = Encrypt.new("Hello")
-
-    assert_equal
+  def test_it_can_slice_message
+    encrypt = Encrypt.new("hello")
+    offset = Offset.new
+    assert_equal [["h", "e", "l", "l"],["o"]], encrypt.sliced
   end
-
-
-
 end
