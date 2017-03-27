@@ -17,6 +17,14 @@ class OffsetTest < Minitest::Test
     assert_equal 8, offset.length
   end
 
+  def test_it_can_be_supplied_a_date
+    offset = Offset.new("2057-03-17").date
+
+
+    assert_equal 8, offset.length
+    assert_equal "20570317", offset
+  end
+
   # def test_it_can_reformat
   #   offset = Offset.new
   #   date = Date.today.to_s.delete "-"

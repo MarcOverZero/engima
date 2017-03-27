@@ -1,24 +1,19 @@
 require 'pry'
 require 'Date'
-
 class Offset
-attr_reader :a, :b, :c, :d
-  def initialize
+attr_reader :date, :a, :b, :c, :d
+  def initialize(date = Date.today.to_s)
+    @date = date.delete "-"
     @a = offset_collection[0]
     @b = offset_collection[1]
     @c = offset_collection[2]
     @d = offset_collection[3]
   end
-  #
+
   def run
-    date
     format_date
     four
     offset_collection
-  end
-
-  def date
-    Date.today.to_s.delete "-"
   end
 
   def format_date
