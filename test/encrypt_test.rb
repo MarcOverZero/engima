@@ -1,7 +1,4 @@
-require 'pry'
-require 'minitest'
-require 'minitest/autorun'
-require 'minitest/pride'
+require './test/test_helper'
 require './lib/encrypt'
 
 class EncryptTest < Minitest::Test
