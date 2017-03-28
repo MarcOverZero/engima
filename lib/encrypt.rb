@@ -9,11 +9,16 @@ class Encrypt
     @key = Key.new.rotated_key
     @chars = Enigma.new.char_map
     @message = message.downcase.chars
+    @encrypted_message = []
   end
 
-  def sliced
+  def scrambled
     message.each_slice(4).map do |slice|
-    slice
+      slice.each_with_index do |letter, idx|
+        start = chars.index(letter)
+        rotation = key[idx]
+        @encrypted_message << chars.rotate(rotation)[start]
+      end
     end
   end
 

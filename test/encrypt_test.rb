@@ -14,9 +14,10 @@ class EncryptTest < Minitest::Test
     assert_instance_of Encrypt, encrypt
   end
 
-  def test_it_can_slice_message
+  def test_it_can_scramble_message
     encrypt = Encrypt.new("hello")
     offset = Offset.new
-    assert_equal [["h", "e", "l", "l"],["o"]], encrypt.sliced
+    #offset of 0489
+    assert_equal 5, encrypt.scrambled.flatten.count
   end
 end
