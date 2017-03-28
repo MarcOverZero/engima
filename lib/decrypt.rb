@@ -2,28 +2,24 @@ require 'pry'
 require './lib/key'
 require './lib/enigma'
 
-class Encrypt
+class Decrypt
   attr_reader :key, :chars, :message
 
   def initialize(message)
     @key = Key.new.rotated_key
     @chars = Enigma.new.char_map
     @message = message.downcase.chars
-    @encrypted_message = []
+    @decrypted_message = []
   end
 
-  def scrambled
+  def unscrambled
     message.each_slice(4).map do |slice|
       slice.each_with_index do |letter, idx|
         start = chars.index(letter)
-        rotation = key[idx]
-        @encrypted_message << chars.rotate(rotation)[start]
+        rotation = key[idx] * -1
+        @decrypted_message << chars.rotate(rotation)[start]
       end
     end
-  end
-
-  def run
-    encrypted_message
   end
 
 #   [14] pry(main)> sentence = "Hello there I am fine".downcase.chars=>
