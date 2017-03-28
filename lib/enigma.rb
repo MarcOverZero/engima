@@ -4,7 +4,6 @@ require './lib/encrypt'
 require './lib/decrypt'
 require '.lib/offset'
 
-
 class Enigma
 
   def initialize
@@ -14,7 +13,8 @@ class Enigma
     @char_map = [*("a".."z")] + [*("0".."9")] + [" ", ".", ","]
   end
 
-  
+  def
+
 
 
 
