@@ -10,8 +10,9 @@ class EncryptTest < Minitest::Test
 
   def test_it_can_scramble_message
     encrypt = Encrypt.new("hello")
-    offset = Offset.new
-    #offset of 0489
-    assert_equal 5, encrypt.scrambled.flatten.count
+    encrypt.instance_variable_set(:@key,[5,5,5,5])
+
+    assert_equal 5, encrypt.scramble.length
+    assert_equal "mjqqt", encrypt.scramble
   end
 end

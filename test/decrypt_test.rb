@@ -8,10 +8,11 @@ class DecryptTest < Minitest::Test
     assert_instance_of Decrypt, decrypt
   end
 
-  # def test_it_can_unscramble_message
-  #   decrypt = Decrypt.new("")
-  #   offset = Offset.new
-  #   #offset of 0489
-  #   assert_equal 5, encrypt.scrambled.flatten.count
-  # end
+  def test_it_can_unscramble_message
+    decrypt = Decrypt.new("mjqqt")
+    decrypt.instance_variable_set(:@key,[5,5,5,5])
+
+    assert_equal 5, decrypt.unscramble.length
+    assert_equal "hello", decrypt.unscramble
+  end
 end

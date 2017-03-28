@@ -14,23 +14,9 @@ class Key
 
   end
 
-  # def a_rotation
-  # end
-  #
-  # def b_rotation
-  # end
-  #
-  # def c_rotation
-  # end
-  #
-  # def d_rotation
-  # end
+  
 
   def rotated_key
     [@a, @b, @c, @d]
   end
-
-  # def run
-  #   cut_key
-  # end
 end
