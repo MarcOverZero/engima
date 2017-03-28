@@ -4,7 +4,6 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/key'
 
-
 class KeyTest < Minitest::Test
 
   def test_it_exists

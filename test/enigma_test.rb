@@ -1,6 +1,3 @@
-require 'simplecov'
-SimpleCov.start
-
 require 'pry'
 require 'minitest'
 require 'minitest/autorun'
