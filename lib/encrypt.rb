@@ -22,6 +22,10 @@ class Encrypt
     end
   end
 
+  def run
+    encrypted_message
+  end
+
 #   [14] pry(main)> sentence = "Hello there I am fine".downcase.chars=>
 # ["h", "e", "l", "l", "o", " ", "t", "h", "e", "r", "e", " ", "i", " ", "a", "m", " ", "f", "i", "n", "e"]
 # [15] pry(main)> a << " "
