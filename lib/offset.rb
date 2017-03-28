@@ -1,7 +1,8 @@
 require 'pry'
 require 'Date'
 class Offset
-attr_reader :date, :a, :b, :c, :d
+attr_reader :date
+attr_accessor :a, :b, :c, :d
   def initialize(date = Date.today)
     @date = date
     @a = offset_collection[0]
@@ -9,7 +10,6 @@ attr_reader :date, :a, :b, :c, :d
     @c = offset_collection[2]
     @d = offset_collection[3]
   end
-
 
   def run
     format_date

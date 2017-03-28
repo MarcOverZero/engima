@@ -20,11 +20,4 @@ class KeyTest < Minitest::Test
 
     refute_equal key_1.cut_key, key_2.cut_key
   end
-
-  def test_cut_key_gets_rotated
-    key= Key.new
-
-    refute_equal key.rotated_key, key.cut_key
-  end
-
 end
