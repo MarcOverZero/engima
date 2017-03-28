@@ -1,7 +1,7 @@
 {
   "Unit Tests": {
     "coverage": {
-      "/Users/rhondakrill/turing/1module/enigma/lib/encrypt.rb": [
+      "/Users/marcfidelman/turing/1mod/enigma/lib/encrypt.rb": [
         1,
         1,
         1,
@@ -13,11 +13,16 @@
         2,
         2,
         2,
+        2,
         null,
         null,
         1,
         1,
         2,
+        5,
+        5,
+        5,
+        null,
         null,
         null,
         null,
@@ -47,7 +52,7 @@
         null,
         null
       ],
-      "/Users/rhondakrill/turing/1module/enigma/lib/key.rb": [
+      "/Users/marcfidelman/turing/1mod/enigma/lib/key.rb": [
         1,
         1,
         null,
@@ -57,22 +62,23 @@
         1,
         12,
         2,
+        2,
+        2,
+        2,
+        2,
         null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
         null,
         null,
         1,
-        0,
         null,
         null,
         1,
-        0,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
         null,
         null,
         1,
@@ -84,10 +90,9 @@
         null,
         null
       ],
-      "/Users/rhondakrill/turing/1module/enigma/lib/offset.rb": [
+      "/Users/marcfidelman/turing/1mod/enigma/lib/offset.rb": [
         1,
         1,
-        null,
         1,
         1,
         1,
@@ -95,20 +100,18 @@
         4,
         4,
         4,
+        4,
         null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
         null,
         null,
         1,
-        58,
+        1,
+        1,
+        1,
         null,
         null,
         1,
+        19,
         19,
         null,
         null,
@@ -129,7 +132,7 @@
         null,
         1
       ],
-      "/Users/rhondakrill/turing/1module/enigma/lib/enigma.rb": [
+      "/Users/marcfidelman/turing/1mod/enigma/lib/enigma.rb": [
         1,
         1,
         null,
@@ -145,6 +148,6 @@
         null
       ]
     },
-    "timestamp": 1490651666
+    "timestamp": 1490663929
   }
 }
