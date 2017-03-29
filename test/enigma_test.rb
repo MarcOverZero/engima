@@ -15,4 +15,7 @@ class EnigmaTest < Minitest::Test
     assert_equal 39, enigma.char_map.count
   end
 
+  def method_we_need
+  end
+
 end

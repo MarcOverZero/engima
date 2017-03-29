@@ -2,13 +2,13 @@ require 'pry'
 require 'Date'
 class Offset
 attr_reader :date
-attr_accessor :a, :b, :c, :d
+attr_accessor :zero, :one, :two, :three
   def initialize(date = Date.today)
     @date = date
-    @a = offset_collection[0]
-    @b = offset_collection[1]
-    @c = offset_collection[2]
-    @d = offset_collection[3]
+    @zero = offset_collection[0]
+    @one = offset_collection[1]
+    @two = offset_collection[2]
+    @three = offset_collection[3]
   end
 
   def run
