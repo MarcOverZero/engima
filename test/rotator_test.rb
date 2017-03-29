@@ -17,7 +17,9 @@ class RotatorTest < Minitest::Test
 
   def test_it_rotates_key
     rotator = Rotator.new
+    offset = Offset.new
 
-    refute rotator.key, rotator.rotation
-  end 
+    assert_equal ("#{rotator.key[0]}#{rotator.key[1]}".to_i+ offset.zero), rotator.rotation[0]
+    refute_equal rotator.key, rotator.rotation
+  end
 end
