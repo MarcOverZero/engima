@@ -11,7 +11,6 @@ attr_accessor :zero, :one, :two, :three
   end
 
   def run
-    format_date
     last_four_digits
     offset_collection
   end

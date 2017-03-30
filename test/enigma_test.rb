@@ -14,13 +14,13 @@ class EnigmaTest < Minitest::Test
     enigma = Enigma.new
 
 
-    assert_equal "lqvx", enigma.encrypt("abcd", "11111", Date.today)
+    assert_equal "lqvx", enigma.encrypt("abcd", "11111",  Date.new(2017, 03, 27))
   end
 
   def test_it_can_decrypt
     enigma = Enigma.new
 
-    assert_equal "abcd", enigma.encrypt("lqvx", "11111", Date.today)
+    assert_equal "abcd", enigma.decrypt("lqvx", "11111", Date.new(2017, 03, 27))
 
   end
 end
