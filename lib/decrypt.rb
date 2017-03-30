@@ -1,12 +1,12 @@
 require 'pry'
-require './lib/key'
+require './lib/rotator'
 require './lib/enigma'
 
 class Decrypt
-  attr_reader :key, :chars, :message
+  attr_reader :rotator, :chars, :message
 
   def initialize(message)
-    @key = Key.new.rotated_key
+    @rotator = Rotator.new.rotation
     @chars = Enigma.new.char_map
     @message = message.downcase.chars
   end
@@ -16,7 +16,7 @@ class Decrypt
     message.each_slice(4).map do |slice|
       slice.each_with_index do |letter, idx|
         start = chars.index(letter)
-        rotation = key[idx] * -1
+        rotation = rotator[idx] * -1
         decrypted_message << chars.rotate(rotation)[start]
       end
     end
