@@ -1,5 +1,4 @@
 require 'pry'
-require 'Date'
 class Offset
 attr_reader :date
 attr_accessor :zero, :one, :two, :three
@@ -12,15 +11,9 @@ attr_accessor :zero, :one, :two, :three
   end
 
   def run
-    format_date
     last_four_digits
     offset_collection
   end
-  #
-  # def format_date
-  #   date_string = date.to_s.delete "-"
-  #   date_string[6..7] + date_string[4..5] + date_string[2..3]
-  # end
 
   def last_four_digits
     square = @date.to_i ** 2
@@ -34,7 +27,3 @@ attr_accessor :zero, :one, :two, :three
     end
   end
 end
-
-# Offset.new.run
-
-'-'

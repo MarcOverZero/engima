@@ -22,14 +22,6 @@ class OffsetTest < Minitest::Test
     assert_equal "170357", offset
   end
 
-  # def test_it_can_reformat
-  #   offset = Offset.new
-  #   date = Date.today.to_s.delete "-"
-  #
-  #   assert_equal 6, offset.date.length
-  #   assert_equal "260317", offset.format_date
-  #
-  # end
   def test_it_can_take_last_four
     offset = Offset.new(Date.new(2057, 03, 17))
     actual = offset.last_four_digits

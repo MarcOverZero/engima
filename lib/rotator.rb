@@ -5,7 +5,7 @@ require './lib/key'
 class Rotator
   attr_reader :key, :offset
 
-  def initialize(key = nil, date=Date.today)
+  def initialize(key = nil, date = Date.today)
     @key = key || Key.new.cut_key
     @offset = Offset.new(date)
   end

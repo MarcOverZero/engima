@@ -4,11 +4,11 @@ require './lib/enigma'
 
 class Encrypt
   CHARACTER_MAP = [*("a".."z")] + [*("0".."9")] + [" ", ".", ","]
-  attr_reader :rotator, :chars, :message
+  attr_reader :rotator, :message
   attr_accessor :encrypted_message
+  
   def initialize(message, rotations)
     @rotations = rotations
-    # @chars = Enigma.new.char_map
     @message = message.downcase.chars
   end
 
