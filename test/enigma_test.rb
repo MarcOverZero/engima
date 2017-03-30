@@ -21,6 +21,11 @@ class EnigmaTest < Minitest::Test
     enigma = Enigma.new
 
     assert_equal "abcd", enigma.decrypt("lqvx", "11111", Date.new(2017, 03, 27))
+  end
 
+  def test_it_can_crack
+    enigma = Enigma.new
+
+    assert_equal 
   end
 end

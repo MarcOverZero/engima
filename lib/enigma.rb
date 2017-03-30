@@ -9,7 +9,8 @@ class Enigma
   def initialize
   end
 
-  def encrypt(input, key = nil, date = nil)
+  def encrypt(input, key = nil, date)#=nil)
+
     combined_rotations = Rotator.new(key, date).rotation
     encrypt_class = Encrypt.new(input, combined_rotations)
 
