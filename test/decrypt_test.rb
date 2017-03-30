@@ -10,7 +10,7 @@ class DecryptTest < Minitest::Test
 
   def test_it_can_unscramble_message
     decrypt = Decrypt.new("mjqqt")
-    decrypt.instance_variable_set(:@key,[5,5,5,5])
+    decrypt.instance_variable_set(:@rotator,[5,5,5,5])
 
     assert_equal 5, decrypt.unscramble.length
     assert_equal "hello", decrypt.unscramble

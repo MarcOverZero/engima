@@ -15,7 +15,16 @@ class EnigmaTest < Minitest::Test
     assert_equal 39, enigma.char_map.count
   end
 
-  def method_we_need
+  def test_it_can_encrypt
+    enigma = Enigma.new
+
+
+    assert_equal "mjqqt", enigma.encrypt("hello", "55555", 2017-03-27)
   end
 
+  def test_it_can_decrypt
+    skip
+    enigma = Enigma.new
+
+  end
 end
