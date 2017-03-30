@@ -24,3 +24,20 @@ class Enigma
     "#{decrypt_class.unscramble}"
   end
 end
+# if __FILE__ == $PROGRAM_NAME
+ #     input_file = File.open(ARGV[0], "r").readlines
+ #     self.encrypt(input_file.join("").chomp)
+ #     output_file = File.open(ARGV[1], encrypted_message)
+ #     output_file.close
+ #     "Created 'encrypted.txt' with the key #{@rotator.key} and the date #{Date.today.strftime("%d%m%y")}."
+ #
+ #     self.decrypt(output_file.join("").chomp)
+ #     decrypted_file = File.write(ARGV[2], "w")
+ #     "Created 'decrypted.txt' with the key #{enigma.rotator.key} and the date #{Date.today.strftime("%d%m%y")}."
+ #
+ #     self.crack(encrypted.txt)
+ #     cracked_file = File.open(ARGV[3], "w").readlines
+ #     self.(input_file.join("").chomp).scramble
+ #     File.write(ARGV[1], encrypted_message)
+ #     "Created 'encrypted.txt' with the key #{enigma.rotator.key} and the date #{Date.today.strftime("%d%m%y")}."
+ #   end
